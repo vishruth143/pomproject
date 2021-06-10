@@ -1,17 +1,17 @@
-2021-06-10 22:18:38,715 : INFO : test_login_page_title : Launching application url.
-2021-06-10 22:18:40,511 : INFO : test_login_page_title : Launching of application url successful.
-2021-06-10 22:18:40,511 : INFO : test_login_page_title : Login to Application.
-2021-06-10 22:18:45,571 : INFO : test_login_page_title : Login to application successful.
-2021-06-10 22:18:45,579 : INFO : test_login_page_title : Login test passed.
-2021-06-10 22:18:45,580 : INFO : test_login_page_title : Launching application url.
-2021-06-10 22:18:46,946 : INFO : test_login_page_title : Launching of application url successful.
-2021-06-10 22:18:46,947 : INFO : test_login_page_title : Login to Application.
-2021-06-10 22:18:48,483 : INFO : test_login_page_title : Login to application successful.
-2021-06-10 22:18:49,045 : INFO : test_login_page_title : Login test passed.
+2021-06-10 22:22:29,147 : INFO : test_login_page_title : Launching application url.
+2021-06-10 22:22:30,935 : INFO : test_login_page_title : Launching of application url successful.
+2021-06-10 22:22:30,935 : INFO : test_login_page_title : Login to Application.
+2021-06-10 22:22:36,763 : INFO : test_login_page_title : Login to application successful.
+2021-06-10 22:22:36,826 : INFO : test_login_page_title : Login test passed.
+2021-06-10 22:22:36,826 : INFO : test_login_page_title : Launching application url.
+2021-06-10 22:22:38,272 : INFO : test_login_page_title : Launching of application url successful.
+2021-06-10 22:22:38,273 : INFO : test_login_page_title : Login to Application.
+2021-06-10 22:22:41,235 : INFO : test_login_page_title : Login to application successful.
+2021-06-10 22:22:41,419 : INFO : test_login_page_title : Login test passed.
  : Login to application successful.
-2021-06-10 22:18:45,579 : INFO : test_login_page_title : Login test passed.
-2021-06-10 22:18:45,580 : INFO : test_login_page_title : Launching application url.
-2021-06-10 22:18:46,946 : INFO : test_login_page_title : Launching of application url successful.
-2021-06-10 22:18:46,947 : INFO : test_login_page_title : Login to Application.
-2021-06-10 22:18:48,483 : INFO : test_login_page_title : Login to application successful.
-2021-06-10 22:18:49,045 : INFO : test_login_page_title : Login test passed.
+2021-06-10 22:22:36,826 : INFO : test_login_page_title : Login test passed.
+2021-06-10 22:22:36,826 : INFO : test_login_page_title : Launching application url.
+2021-06-10 22:22:38,272 : INFO : test_login_page_title : Launching of application url successful.
+2021-06-10 22:22:38,273 : INFO : test_login_page_title : Login to Application.
+2021-06-10 22:22:41,235 : INFO : test_login_page_title : Login to application successful.
+2021-06-10 22:22:41,419 : INFO : test_login_page_title : Login test passed.

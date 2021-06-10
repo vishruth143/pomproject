@@ -243,7 +243,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 10-Jun-2021 at 22:17:06 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 10-Jun-2021 at 22:18:55 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -259,8 +259,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.9.5</td></tr></table>
     <h2>Summary</h2>
-    <p>69 tests ran in 23.16 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">65 passed</span>, <input checked="true" class="filter" data-test-result="skipped" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">1 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">3 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">1 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="rerun">3 rerun</span>
+    <p>69 tests ran in 28.47 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">66 passed</span>, <input checked="true" class="filter" data-test-result="skipped" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">1 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">2 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">1 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="rerun">0 rerun</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -271,32 +271,6 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="failed results-table-row">
-        <tr>
-          <td class="col-result">Failed</td>
-          <td class="col-name">tests/test_login_page_title.py::TestLoginPageTitle::test_login_page_title</td>
-          <td class="col-duration">9.43</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">self = &lt;tests.test_login_page_title.TestLoginPageTitle object at 0x0000019603257190&gt;<br/>driver_setup = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session=&quot;ffd600b41928b553a33bec23860da863&quot;)&gt;<br/>tests_setup = {&#x27;test_home_page_title&#x27;: [{&#x27;Description&#x27;: &#x27;Verify Login Page Title&#x27;, &#x27;Email&#x27;: &#x27;admin@yourstore.com&#x27;, &#x27;Run?&#x27;: &#x27;Y&#x27;, &#x27;Sce...iption&#x27;: &#x27;Verify Login Page Title&#x27;, &#x27;Email&#x27;: &#x27;admin@yourstore.com&#x27;, &#x27;Run?&#x27;: &#x27;Y&#x27;, &#x27;Scenario&#x27;: &#x27;test_login_page_title&#x27;}]}<br/><br/>    def test_login_page_title(self, driver_setup, tests_setup):<br/>        log = self.get_logger()<br/>        self.data = tests_setup<br/>        test_data = [x for x in self.data[&#x27;test_login_page_title&#x27;] if x[&#x27;Run?&#x27;] == &#x27;Y&#x27;]<br/>    <br/>        for i in range(len(test_data)):<br/>            if test_data[i][&#x27;Scenario&#x27;] == &#x27;test_login_page_title&#x27;:<br/>    <br/>                self.driver = driver_setup<br/>    <br/>                # Libraries needed<br/>                commonfunctions = CommonFunctions(self.driver, test_data, i)<br/>    <br/>                # Pages needed<br/>                loginpage = LoginPage(self.driver)<br/>    <br/>                log.info(&quot;Launching application url.&quot;)<br/>                self.driver.get(s.qa_baseurl)<br/>                log.info(&quot;Launching of application url successful.&quot;)<br/>    <br/>                log.info(&quot;Login to Application.&quot;)<br/>                commonfunctions.login()<br/>                log.info(&quot;Login to application successful.&quot;)<br/>    <br/>                actual_title = self.driver.title<br/>                expected_title = &#x27;Dashboard / nopCommerce administration&#x27;<br/>    <br/>                if actual_title == expected_title:<br/>                    log.info(&quot;Login test passed.&quot;)<br/>                    assert True<br/>                else:<br/>                    log.info(&quot;Login test failed.&quot;)<br/>&gt;                   assert False<br/><span class="error">E                   assert False</span><br/><br/>tests\test_login_page_title.py:41: AssertionError<br/> -----------------------------Captured stdout setup------------------------------ <br/>----------Driver - Setup----------
-<br/> -----------------------------Captured stderr setup------------------------------ <br/>
-
-====== WebDriver manager ======
-Current google-chrome version is 91.0.4472
-Get LATEST driver version for 91.0.4472
-Driver [C:\Users\vishr\.wdm\drivers\chromedriver\win32\91.0.4472.19\chromedriver.exe] found in cache
-<br/> -------------------------------Captured log setup------------------------------- <br/>INFO     WDM:logger.py:12 
-
-INFO     WDM:logger.py:12 ====== WebDriver manager ======
-INFO     WDM:logger.py:12 Current google-chrome version is 91.0.4472
-INFO     WDM:logger.py:12 Get LATEST driver version for 91.0.4472
-INFO     WDM:logger.py:12 Driver [C:\Users\vishr\.wdm\drivers\chromedriver\win32\91.0.4472.19\chromedriver.exe] found in cache<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_login_page_title:test_login_page_title.py:25 Launching application url.
-INFO     test_login_page_title:test_login_page_title.py:27 Launching of application url successful.
-INFO     test_login_page_title:test_login_page_title.py:29 Login to Application.
-INFO     test_login_page_title:test_login_page_title.py:31 Login to application successful.
-INFO     test_login_page_title:test_login_page_title.py:40 Login test failed.<br/> ----------------------------Captured stdout teardown---------------------------- <br/>----------Driver - Tear Down----------
-<br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
@@ -315,33 +289,6 @@ INFO     test_login_page_title:test_login_page_title.py:40 Login test failed.<br
         <tr>
           <td class="extra" colspan="4">
             <div class="log">i = 25<br/><br/>    @pytest.mark.parametrize(&quot;i&quot;, range(50))<br/>    def test_num(i):<br/>        if i in (17, 25):<br/>&gt;           pytest.fail(&quot;bad luck&quot;)<br/><span class="error">E           Failed: bad luck</span><br/><br/>tests\test_rerun.py:7: Failed<br/></div></td></tr></tbody>
-      <tbody class="rerun results-table-row">
-        <tr>
-          <td class="col-result">Rerun</td>
-          <td class="col-name">tests/test_flaky.py::test_example1</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">@pytest.mark.flaky(reruns=5, reruns_delay=2)<br/>    def test_example1():<br/>&gt;       assert random.choice([True, False])<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Random.choice of &lt;random.Random object at 0x000001967EC699C0&gt;&gt;([True, False])</span><br/><span class="error">E        +    where &lt;bound method Random.choice of &lt;random.Random object at 0x000001967EC699C0&gt;&gt; = random.choice</span><br/><br/>tests\test_flaky.py:13: AssertionError<br/></div></td></tr></tbody>
-      <tbody class="rerun results-table-row">
-        <tr>
-          <td class="col-result">Rerun</td>
-          <td class="col-name">tests/test_flaky.py::test_example1</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">@pytest.mark.flaky(reruns=5, reruns_delay=2)<br/>    def test_example1():<br/>&gt;       assert random.choice([True, False])<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Random.choice of &lt;random.Random object at 0x000001967EC699C0&gt;&gt;([True, False])</span><br/><span class="error">E        +    where &lt;bound method Random.choice of &lt;random.Random object at 0x000001967EC699C0&gt;&gt; = random.choice</span><br/><br/>tests\test_flaky.py:13: AssertionError<br/></div></td></tr></tbody>
-      <tbody class="rerun results-table-row">
-        <tr>
-          <td class="col-result">Rerun</td>
-          <td class="col-name">tests/test_flaky.py::test_example</td>
-          <td class="col-duration">0.00</td>
-          <td class="col-links"></td></tr>
-        <tr>
-          <td class="extra" colspan="4">
-            <div class="log">@pytest.mark.flaky(reruns=5, condition=sys.platform.startswith(&quot;win32&quot;))<br/>    def test_example():<br/>&gt;       assert random.choice([True, False])<br/><span class="error">E       assert False</span><br/><span class="error">E        +  where False = &lt;bound method Random.choice of &lt;random.Random object at 0x000001967EC699C0&gt;&gt;([True, False])</span><br/><span class="error">E        +    where &lt;bound method Random.choice of &lt;random.Random object at 0x000001967EC699C0&gt;&gt; = random.choice</span><br/><br/>tests\test_flaky.py:18: AssertionError<br/></div></td></tr></tbody>
       <tbody class="xpassed results-table-row">
         <tr>
           <td class="col-result">XPassed</td>
@@ -365,7 +312,7 @@ INFO     test_login_page_title:test_login_page_title.py:40 Login test failed.<br
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_order.py::test_bar</td>
-          <td class="col-duration">0.62</td>
+          <td class="col-duration">0.63</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -537,7 +484,7 @@ vishruth.cse@gmail.com
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_home_page_title.py::TestHomePageTitle::test_login_page_title</td>
-          <td class="col-duration">8.22</td>
+          <td class="col-duration">8.73</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -559,6 +506,37 @@ INFO     test_login_page_title:test_home_page_title.py:33 &#x27;Home Page Title&
 INFO     test_login_page_title:test_home_page_title.py:25 Launching application url.
 INFO     test_login_page_title:test_home_page_title.py:27 Launching of application url successful.
 INFO     test_login_page_title:test_home_page_title.py:33 &#x27;Home Page Title&#x27; test passed.<br/> ----------------------------Captured stdout teardown---------------------------- <br/>----------Driver - Tear Down----------
+<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">tests/test_login_page_title.py::TestLoginPageTitle::test_login_page_title</td>
+          <td class="col-duration">18.52</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>----------Driver - Setup----------
+<br/> -----------------------------Captured stderr setup------------------------------ <br/>
+
+====== WebDriver manager ======
+Current google-chrome version is 91.0.4472
+Get LATEST driver version for 91.0.4472
+Driver [C:\Users\vishr\.wdm\drivers\chromedriver\win32\91.0.4472.19\chromedriver.exe] found in cache
+<br/> -------------------------------Captured log setup------------------------------- <br/>INFO     WDM:logger.py:12 
+
+INFO     WDM:logger.py:12 ====== WebDriver manager ======
+INFO     WDM:logger.py:12 Current google-chrome version is 91.0.4472
+INFO     WDM:logger.py:12 Get LATEST driver version for 91.0.4472
+INFO     WDM:logger.py:12 Driver [C:\Users\vishr\.wdm\drivers\chromedriver\win32\91.0.4472.19\chromedriver.exe] found in cache<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_login_page_title:test_login_page_title.py:25 Launching application url.
+INFO     test_login_page_title:test_login_page_title.py:27 Launching of application url successful.
+INFO     test_login_page_title:test_login_page_title.py:29 Login to Application.
+INFO     test_login_page_title:test_login_page_title.py:31 Login to application successful.
+INFO     test_login_page_title:test_login_page_title.py:37 Login test passed.
+INFO     test_login_page_title:test_login_page_title.py:25 Launching application url.
+INFO     test_login_page_title:test_login_page_title.py:27 Launching of application url successful.
+INFO     test_login_page_title:test_login_page_title.py:29 Login to Application.
+INFO     test_login_page_title:test_login_page_title.py:31 Login to application successful.
+INFO     test_login_page_title:test_login_page_title.py:37 Login test passed.<br/> ----------------------------Captured stdout teardown---------------------------- <br/>----------Driver - Tear Down----------
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
@@ -987,7 +965,7 @@ INFO     test_login_page_title:test_home_page_title.py:33 &#x27;Home Page Title&
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_rerun.py::test_num[49]</td>
-          <td class="col-duration">0.08</td>
+          <td class="col-duration">0.12</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">

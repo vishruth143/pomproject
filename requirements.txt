@@ -1,0 +1,15 @@
+selenium
+python-dotenv
+pytest
+pytest-html
+pytest-xdist
+openpyxl
+webdriver-manager
+xlrd
+pytest-rerunfailures
+pytest-instafail
+pytest-failed-screenshot
+PyYAML
+xlsxwriter
+Faker
+pytest-order

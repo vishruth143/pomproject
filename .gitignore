@@ -1,6 +1,4 @@
 .pytest_cache
-logs
-output
 ~$*.xlsx
 .idea
 venv

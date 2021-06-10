@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="3" skipped="1" tests="70" time="23.143" timestamp="2021-06-10T22:16:43.613361" hostname="LAPTOP-9MKQQPJI"><testcase classname="tests.test_order" name="test_bar" time="0.625" /><testcase classname="tests.test_order" name="test_foo" time="0.001" /><testcase classname="tests.test_container" name="test_smoke" time="0.003" /><testcase classname="tests.test_container" name="test_regression" time="0.003" /><testcase classname="tests.test_demo1" name="test_firstProgram" time="0.001" /><testcase classname="tests.test_demo1" name="test_secondgreetcreditCard" time="0.001" /><testcase classname="tests.test_demo1" name="test_crossbrowser[crossbrowser0]" time="0.001" /><testcase classname="tests.test_demo1" name="test_crossbrowser[crossbrowser1]" time="0.001" /><testcase classname="tests.test_demo1" name="test_crossbrowser[crossbrowser2]" time="0.001" /><testcase classname="tests.test_demo2" name="test_firstprogram" time="0.001"><skipped type="pytest.skip" message="unconditional skip">C:\PycharmProjects\pomproject\tests\test_demo2.py:4: unconditional skip</skipped></testcase><testcase classname="tests.test_demo2" name="test_secondcreditcard" time="0.001" /><testcase classname="tests.test_fixturedata.TestExample2" name="test_editprofile" time="0.003" /><testcase classname="tests.test_fixturedemo.TestExample" name="test_fixturedemo" time="0.001" /><testcase classname="tests.test_fixturedemo.TestExample" name="test_fixturedemo1" time="0.001" /><testcase classname="tests.test_fixturedemo.TestExample" name="test_fixturedemo2" time="0.001" /><testcase classname="tests.test_fixturedemo.TestExample" name="test_fixturedemo3" time="0.001" /><testcase classname="tests.test_flaky" name="test_example1" time="0.008" /><testcase classname="tests.test_flaky" name="test_example" time="0.004" /><testcase classname="tests.test_home_page_title.TestHomePageTitle" name="test_login_page_title" time="8.225" /><testcase classname="tests.test_login_page_title.TestLoginPageTitle" name="test_login_page_title" time="9.440"><failure message="assert False">self = &lt;tests.test_login_page_title.TestLoginPageTitle object at 0x0000019603257190&gt;
+driver_setup = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="ffd600b41928b553a33bec23860da863")&gt;
+tests_setup = {'test_home_page_title': [{'Description': 'Verify Login Page Title', 'Email': 'admin@yourstore.com', 'Run?': 'Y', 'Sce...iption': 'Verify Login Page Title', 'Email': 'admin@yourstore.com', 'Run?': 'Y', 'Scenario': 'test_login_page_title'}]}
+
+    def test_login_page_title(self, driver_setup, tests_setup):
+        log = self.get_logger()
+        self.data = tests_setup
+        test_data = [x for x in self.data['test_login_page_title'] if x['Run?'] == 'Y']
+    
+        for i in range(len(test_data)):
+            if test_data[i]['Scenario'] == 'test_login_page_title':
+    
+                self.driver = driver_setup
+    
+                # Libraries needed
+                commonfunctions = CommonFunctions(self.driver, test_data, i)
+    
+                # Pages needed
+                loginpage = LoginPage(self.driver)
+    
+                log.info("Launching application url.")
+                self.driver.get(s.qa_baseurl)
+                log.info("Launching of application url successful.")
+    
+                log.info("Login to Application.")
+                commonfunctions.login()
+                log.info("Login to application successful.")
+    
+                actual_title = self.driver.title
+                expected_title = 'Dashboard / nopCommerce administration'
+    
+                if actual_title == expected_title:
+                    log.info("Login test passed.")
+                    assert True
+                else:
+                    log.info("Login test failed.")
+&gt;                   assert False
+E                   assert False
+
+tests\test_login_page_title.py:41: AssertionError</failure></testcase><testcase classname="tests.test_rerun" name="test_num[0]" time="0.002" /><testcase classname="tests.test_rerun" name="test_num[1]" time="0.003" /><testcase classname="tests.test_rerun" name="test_num[2]" time="0.003" /><testcase classname="tests.test_rerun" name="test_num[3]" time="0.002" /><testcase classname="tests.test_rerun" name="test_num[4]" time="0.003" /><testcase classname="tests.test_rerun" name="test_num[5]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[6]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[7]" time="0.002" /><testcase classname="tests.test_rerun" name="test_num[8]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[9]" time="0.002" /><testcase classname="tests.test_rerun" name="test_num[10]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[11]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[12]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[13]" time="0.002" /><testcase classname="tests.test_rerun" name="test_num[14]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[15]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[16]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[17]" time="0.001"><failure message="Failed: bad luck">i = 17
+
+    @pytest.mark.parametrize("i", range(50))
+    def test_num(i):
+        if i in (17, 25):
+&gt;           pytest.fail("bad luck")
+E           Failed: bad luck
+
+tests\test_rerun.py:7: Failed</failure></testcase><testcase classname="tests.test_rerun" name="test_num[18]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[19]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[20]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[21]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[22]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[23]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[24]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[25]" time="0.001"><failure message="Failed: bad luck">i = 25
+
+    @pytest.mark.parametrize("i", range(50))
+    def test_num(i):
+        if i in (17, 25):
+&gt;           pytest.fail("bad luck")
+E           Failed: bad luck
+
+tests\test_rerun.py:7: Failed</failure></testcase><testcase classname="tests.test_rerun" name="test_num[26]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[27]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[28]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[29]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[30]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[31]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[32]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[33]" time="0.002" /><testcase classname="tests.test_rerun" name="test_num[34]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[35]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[36]" time="0.002" /><testcase classname="tests.test_rerun" name="test_num[37]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[38]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[39]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[40]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[41]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[42]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[43]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[44]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[45]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[46]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[47]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[48]" time="0.001" /><testcase classname="tests.test_rerun" name="test_num[49]" time="0.084" /></testsuite></testsuites>

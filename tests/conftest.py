@@ -4,6 +4,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from utilities.loaders import load_xlsx, write_data_dic_to_file
+import settings as s
+from selenium.webdriver.chrome.options import Options
 
 
 # This section of coded is added to provide browser name from command line as parameter
@@ -20,8 +22,17 @@ def driver_setup(request):
     print('-' * 10 + 'Driver - Setup' + '-' * 10)
     browser_name = request.config.getoption("browser_name")
     browser_name = browser_name.upper()
-    if browser_name == "CHROME":
+    if browser_name == "CHROME" and s.DOCKER == 'N':
         driver = webdriver.Chrome(ChromeDriverManager().install())
+    elif browser_name == "CHROME" and s.DOCKER == 'Y':
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_prefs = {}
+        chrome_options.experimental_options["prefs"] = chrome_prefs
+        chrome_prefs["profile.default_content_settings"] = {"images": 2}
+        driver = webdriver.Chrome(options=chrome_options)
     elif browser_name == "FIREFOX":
         driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
     elif browser_name == "EDGE":

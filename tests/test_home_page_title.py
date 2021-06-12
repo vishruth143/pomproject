@@ -2,7 +2,6 @@ from pages.login_page import LoginPage
 from lib.commonfunctions import CommonFunctions
 import settings as s
 from utilities.custom_logger import Logger
-from utilities.loaders import load_xlsx
 
 
 class TestHomePageTitle(Logger):

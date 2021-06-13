@@ -24,14 +24,19 @@ RUN unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
 # Set display port as an environment variable
 ENV DISPLAY=:99
 
+# Create a project directory
 RUN mkdir /pomproject/
 
+# Copy all the files from the current working directory to newly created project directory in the above step
 ADD . /pomproject/
 
+# Set newly created project directory as working directory
 WORKDIR /pomproject/
 
+# Upgrade PIP
 RUN pip install --upgrade pip
 
+# In stall all the required pyhton packages
 RUN pip install -r requirements.txt
 
 # ENV GROUP="smoke"
